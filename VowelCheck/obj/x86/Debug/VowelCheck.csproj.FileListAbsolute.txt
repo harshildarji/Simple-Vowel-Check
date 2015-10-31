@@ -1,0 +1,7 @@
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\bin\Debug\VowelCheck.exe
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\bin\Debug\VowelCheck.pdb
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Debug\VowelCheck.Properties.Resources.resources
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Debug\VowelCheck.VowelCheck.resources
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Debug\VowelCheck.csproj.GenerateResource.Cache
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Debug\VowelCheck.exe
+c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Debug\VowelCheck.pdb
