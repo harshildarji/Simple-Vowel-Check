@@ -5,3 +5,4 @@ c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\
 c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Release\VowelCheck.csproj.GenerateResource.Cache
 c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Release\VowelCheck.exe
 c:\users\jarvis\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Release\VowelCheck.pdb
+C:\Users\JARVIS\documents\visual studio 2010\Projects\VowelCheck\VowelCheck\obj\x86\Release\VowelCheck.csprojResolveAssemblyReference.cache

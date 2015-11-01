@@ -16,10 +16,11 @@ namespace VowelCheck
             InitializeComponent();
         }
 
-        int a, ee, i, o, u;
+        int a, ee, i, o, u, flag, count;
         private void button1_Click(object sender, EventArgs e)
         {
             string str = textBox1.Text;
+            string s = null;
             a = ee = i = o = u = 0;
             if (str.Equals(""))
             {
@@ -29,15 +30,61 @@ namespace VowelCheck
             {
                 foreach (char c in str)
                 {
-                    if (c == 'a') { a++; }
-                    else if (c == 'e') { ee++; }
-                    else if (c == 'i') { i++; }
-                    else if (c == 'o') { o++; }
-                    else if (c == 'u') { u++; }
+                    if (c == 'a') 
+                    { 
+                        a++;
+                        if (a == 1) 
+                        {
+                            if (flag == 0) { s = s + "a"; flag++; }
+                            else { s = s + ", a"; }
+                            count++;
+                        }
+                    }
+                    else if (c == 'e') 
+                    { 
+                        ee++;
+                        if (ee == 1) 
+                        {
+                            if (flag == 0) { s = s + "e"; flag++; }
+                            else { s = s + ", e"; }
+                            count++;
+                        }
+                    }
+                    else if (c == 'i') 
+                    { 
+                        i++;
+                        if (i == 1)
+                        {
+                            if (flag == 0) { s = s + "i"; flag++; }
+                            else { s = s + ", i"; }
+                            count++;
+                        }
+                    }
+                    else if (c == 'o') 
+                    { 
+                        o++;
+                        if (o == 1)
+                        {
+                            if (flag == 0) { s = s + "o"; flag++; }
+                            else { s = s + ", o"; }
+                            count++;
+                        }
+                    }
+                    else if (c == 'u') 
+                    { 
+                        u++;
+                        if (u == 1)
+                        {
+                            if (flag == 0) { s = s + "u"; flag++; }
+                            else { s = s + ", u"; }
+                            count++;
+                        }
+                    }
                 }
-                if (a == 0 || ee == 0 || i == 0 || o == 0 || u == 0) { MessageBox.Show("Not all the vowels are available", "Check Result"); }
+                if (a == 0 || ee == 0 || i == 0 || o == 0 || u == 0) { MessageBox.Show("Only " + count + " vowels are available: " + s + "", "Check Result"); }
                 else { MessageBox.Show("All the vowels are available", "Check Result"); }
                 button2.Enabled = true;
+                count = flag = 0;
             }
         }
 
@@ -50,6 +97,11 @@ namespace VowelCheck
         private void label2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Vowel Check (v1.0)\n\nby: Harshil Darji (github.com\\H-Darji)", "About");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
         }
     }
 }
