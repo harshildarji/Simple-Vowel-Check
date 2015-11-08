@@ -33,52 +33,59 @@ namespace VowelCheck
                     if (c == 'a') 
                     { 
                         a++;
-                        if (a == 1) 
-                        {
-                            if (flag == 0) { s = s + "a"; flag++; }
-                            else { s = s + ", a"; }
-                        }
+                        if (a == 1) { s = s + "a"; }
                     }
                     else if (c == 'e') 
                     { 
                         ee++;
-                        if (ee == 1) 
-                        {
-                            if (flag == 0) { s = s + "e"; flag++; }
-                            else { s = s + ", e"; }
-                        }
+                        if (ee == 1) { s = s + "e"; }
                     }
                     else if (c == 'i') 
                     { 
                         i++;
-                        if (i == 1)
-                        {
-                            if (flag == 0) { s = s + "i"; flag++; }
-                            else { s = s + ", i"; }
-                        }
+                        if (i == 1) { s = s + "i"; }
                     }
                     else if (c == 'o') 
                     { 
                         o++;
-                        if (o == 1)
-                        {
-                            if (flag == 0) { s = s + "o"; flag++; }
-                            else { s = s + ", o"; }
-                        }
+                        if (o == 1) { s = s + "o"; }
                     }
                     else if (c == 'u') 
                     { 
                         u++;
-                        if (u == 1)
-                        {
-                            if (flag == 0) { s = s + "u"; flag++; }
-                            else { s = s + ", u"; }
-                        }
+                        if (u == 1) { s = s + "u"; }
                     }
                 }
-                if (a == 0 || ee == 0 || i == 0 || o == 0 || u == 0) { MessageBox.Show("Available vowels: " + s + "", "Check Result"); }
-                else { MessageBox.Show("All the vowels are available", "Check Result"); }
-                button2.Enabled = true;
+                if (a == 0 && ee == 0 && i == 0 && o == 0 && u == 0) 
+                { 
+                    MessageBox.Show("No vowels are there", "Check Result");
+                    button2.Enabled = false;
+                }
+                else if (a == 0 || ee == 0 || i == 0 || o == 0 || u == 0) 
+                {
+                    char[] s1 = s.ToCharArray();
+                    Array.Sort(s1);
+                    string s2 = new String(s1);
+                    s = null;
+                    foreach(char c in s2)
+                    {
+                        if (s == null)
+                        {
+                            s = s + c;
+                        }
+                        else
+                        {
+                            s = s + ", " + c;
+                        }
+                    }
+                    MessageBox.Show("Available vowels: " + s + "", "Check Result");
+                    button2.Enabled = true;
+                }
+                else 
+                { 
+                    MessageBox.Show("All the vowels are available", "Check Result");
+                    button2.Enabled = true;
+                }
                 flag = 0;
             }
         }
@@ -91,7 +98,7 @@ namespace VowelCheck
 
         private void label2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vowel Check (v1.0)\n\nby: Harshil Darji (github.com/H-Darji)", "About");
+            MessageBox.Show("Vowel Check (v 1.3)\n\nby: Harshil Darji (github.com/H-Darji)", "About");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
